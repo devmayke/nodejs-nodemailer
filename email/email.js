@@ -7,9 +7,10 @@ let transporter = nodemailer.createTransport({
     secure: false, 
     auth:{
         user: "devmayke@gmail.com",
-        pass: "Codebase1@1"
+        pass: ""
     }
 })
+
 function enviaEmail(req, res){
     transporter.sendMail({
         from: `${req.body.nome} <devmayke@gmail.com>`,
@@ -20,9 +21,8 @@ function enviaEmail(req, res){
         console.log(sucesso)
         res.send('email enviado com sucesso')
     }).catch((err)=>{
-    console.log(err)}) 
-
-}
+        console.log(err)
+    })}
 
 module.exports = {
     nodemailer, 
