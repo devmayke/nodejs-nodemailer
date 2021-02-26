@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const admin = require('./routes/admin');
+const admin = require('./routes');
 const handlebars = require('express-handlebars');
 const bodyParser = require('body-parser')
 
