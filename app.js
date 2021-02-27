@@ -1,11 +1,14 @@
 const express = require('express');
 const app = express();
 const admin = require('./routes');
+const path = require('path')
 
 const handlebars = require('express-handlebars');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const { dirname } = require('path');
 const PORT = 3000
 
+app.use(express.static(path.join(__dirname, "public")))
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
