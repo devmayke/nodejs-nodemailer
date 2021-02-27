@@ -1,5 +1,5 @@
 module.exports = {
-    form:(req, res)=>{
-    res.render('form')
-} 
+    get:(req, res)=>{
+        res.render('form')
+    } 
 }
