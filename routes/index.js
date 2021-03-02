@@ -1,32 +1,16 @@
 const express = require('express');
 const app = express();
 const router = express.Router();
-const nodemailer = require('./email.js')
-const formulario = require('./formulario')
+const nodemailer = require('./email.js');
+const formulario = require('./formulario');
+const home = require('./home');
+const sobre = require('./sobre');
 
+router.get("/contato", formulario.get);
 
-router.get("/contato", formulario.pegar)
+router.get('/', home.get);
 
-// router.get("/home", home.get)
+router.get("/sobre", sobre.get);
 
-
-router.get("/", (req, res)=>{
-    let obj ={       
-        nome:"mayke",
-        idade:31
-       
-    }  
-    
-    res.render('home', obj)
-
-  
-    // res.send(obj)
-})
-
-router.get("/sobre", function(req, res){
-    
-    res.render("about")
-})
-
-router.post("/formulario", nodemailer.post)
+router.post("/formulario", nodemailer.post);
 module.exports = router;

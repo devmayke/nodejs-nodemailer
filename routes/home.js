@@ -1,10 +1,5 @@
-
-let obj ={nome:"mayke"}
-
 module.exports = {
-    get:(req, res, obj)=>{
+    get:(req, res)=>{
         res.render('home')
     }  
-
-
 }
