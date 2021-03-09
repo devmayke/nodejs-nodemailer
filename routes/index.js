@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
 const router = express.Router();
-const nodemailer = require('./email.js');
-const formulario = require('./formulario');
-const home = require('./home');
-const sobre = require('./sobre');
+const nodemailer = require('../controllers/email.js');
+const formulario = require('../controllers/formulario');
+const home = require('../controllers/home');
+const sobre = require('../controllers/sobre');
 
 router.get("/contato", formulario.get);
 
