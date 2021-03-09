@@ -19,7 +19,7 @@ module.exports = {
         transporter.sendMail({
             from: `${req.body.nome} <devmayke@gmail.com>`,
             to: "incognator@gmail.com",
-            subject:`Formuário criado no servido node`,
+            subject:`Formuário criado no servidor node`,
             html:`Enviado de: ${req.body.email}`+`<br>`+`${req.body.mensagem}`
         }).then((sucesso)=>{
             console.log(sucesso)
